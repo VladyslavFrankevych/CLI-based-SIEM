@@ -1,4 +1,4 @@
-# CLI-based SIEM Plasma
+# CLI-based SIEM
 A Security Information and Event Management (SIEM) system is a security management tool that aggregates and analyzes data from various sources to identify and alert on potential security threats.
 
 To run the program, you can use the following command:
