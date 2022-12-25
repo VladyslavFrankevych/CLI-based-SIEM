@@ -3,7 +3,7 @@ A Security Information and Event Management (SIEM) system is a security manageme
 
 To run the program, you can use the following command:
 
-`python siem.py -s <data_source> [-a] [-r]`
+`python plasma.py -s <data_source> [-a] [-r]`
 
 Replace <data_source> with the path to the data source file, and use the -a and -r arguments to enable analysis and report generation, respectively.
 
