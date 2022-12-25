@@ -40,7 +40,7 @@ def main():
     | |   | | (_| \__ \ | | | | | (_| |
     \_|   |_|\__,_|___/_| |_| |_|\__,_|              
     """)
-    parser = argparse.ArgumentParser(description="CLI-based SIEM Plasma")
+    parser = argparse.ArgumentParser(description="CLI-based SIEM")
     parser.add_argument("-s", "--source", type=str, required=True, help="The data source (e.g., a log file)")
     parser.add_argument("-a", "--analyze", action="store_true", help="Analyze the collected security events")
     parser.add_argument("-r", "--report", action="store_true", help="Generate a report on identified threats")
