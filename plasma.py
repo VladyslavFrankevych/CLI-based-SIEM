@@ -1,4 +1,7 @@
 import argparse
+import colorama
+
+colorama.init(autoreset=True)
 
 # Data structures to store security events
 security_events = []
@@ -17,19 +20,27 @@ def analyze_security_events(events):
     # (Pseudocode - you will need to implement the actual analysis logic)
     for event in events:
         if event["severity"] == "high":
-            print("Threat detected:", event["description"])
+            print(f"{colorama.Fore.RED}Threat detected: {event['description']}")
 
 # Generate a report on the identified threats
 def generate_report(events):
     # Generate a report based on the analyzed security events and output it to the user
     # (Pseudocode - you will need to implement the actual report generation logic)
-    print("Security report:")
+    print(f"Security report:")
     for event in events:
         print("{} ({}): {}".format(event["timestamp"], event["severity"], event["description"]))
 
 def main():
     # Parse the command line arguments
-    parser = argparse.ArgumentParser(description="CLI-based SIEM")
+    print(f"""{colorama.Fore.BLUE}
+    ______ _                           
+    | ___ \ |                          
+    | |_/ / | __ _ ___ _ __ ___   __ _ 
+    |  __/| |/ _` / __| '_ ` _ \ / _` |
+    | |   | | (_| \__ \ | | | | | (_| |
+    \_|   |_|\__,_|___/_| |_| |_|\__,_|              
+    """)
+    parser = argparse.ArgumentParser(description="CLI-based SIEM Plasma")
     parser.add_argument("-s", "--source", type=str, required=True, help="The data source (e.g., a log file)")
     parser.add_argument("-a", "--analyze", action="store_true", help="Analyze the collected security events")
     parser.add_argument("-r", "--report", action="store_true", help="Generate a report on identified threats")
